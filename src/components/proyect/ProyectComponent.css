@@ -44,10 +44,36 @@ div.ProyectComponentClass>div.imagesProyectsDisplay {
     justify-content: center;
     opacity: .8;
     padding-top: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.__visibleNot{
+    display: none;
+}
+div.ProyectComponentClass>div.imagesProyectsDisplay>span {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .6;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+div.ProyectComponentClass>div.imagesProyectsDisplay>svg {
+    color: #fff;
+    position: absolute;
+    z-index: 7;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    pointer-events: none;
 }
 div.ProyectComponentClass>div.imagesProyectsDisplay>img {
     box-shadow: 0 0 5px 2px #000000;
 }
+
 div.ProyectComponentClass>div.imagesProyectsDisplay>img:nth-child(1) {
     width: 40%;
     height: fit-content;
