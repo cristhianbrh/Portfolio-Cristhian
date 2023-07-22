@@ -1,0 +1,35 @@
+.InputComponentClass
+{
+    position: relative; 
+}
+.InputComponentClass>input
+{
+    height: 40px;
+    width: 300px;
+    font-size: 15px;
+    font-family:  monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+.InputComponentClass>span{
+    color: #313131;
+    letter-spacing: 0.5px;
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    transition: all 0.5s;
+}
+input.InputComponentClass_input:focus ~ span.InputComponentClass_span,
+input.InputComponentClass_input:valid ~ span.InputComponentClass_span,
+span.InputTextMin
+{
+    left: 10px;
+    top: 0px;
+    font-size: 12px;
+    transition: all 0.5s;
+}
+input.InputComponentClass_input:invalid
+{
+    border: 3px solid red;
+    border-radius: 3px;
+}

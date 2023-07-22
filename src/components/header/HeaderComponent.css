@@ -1,0 +1,59 @@
+li
+{
+    list-style: none;
+}
+
+.HeaderComponent-class {
+    background-color: rgba(1, 3, 24, 0.9);
+    color: #FFFFFF;
+    font-size: 20;
+    font-weight: bold;
+    position: fixed;
+    
+    height: 50px;
+    width: 100%;
+    z-index: 3;
+}
+
+.HeaderComponent-class>nav>img {
+    height: 50px;
+}
+
+.HeaderComponent-class>nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.HeaderComponent-class>nav>* {
+    display: inline-block;
+}
+.HeaderComponent-class>nav>div
+{
+    height: 90%;
+    width: auto;
+    display: flex;
+    gap: 12px;
+    /* margin-right: 12px; */
+}
+.HeaderComponent-class>nav>div>*
+{
+    height: 100%;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.HeaderComponent-class>nav>div>a
+{
+    cursor: pointer;
+}
+.HeaderComponent-class>nav>div>a:hover
+{
+    text-shadow: 0 0 6px #FFFFFF;
+}

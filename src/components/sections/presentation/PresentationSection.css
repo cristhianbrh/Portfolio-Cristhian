@@ -1,0 +1,100 @@
+section.presentation {
+    --opacity-black: 0.86;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacity-black)), rgba(0, 0, 0, var(--opacity-black))), url('./../../../sources/img/background-presentation.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.presentation>div.presentationImgs {
+    width: 100%;
+    display: inline;
+    width: 180px;
+    position: relative;
+}
+
+section.presentation>div.presentationImgs>img {
+    /* transform: translateY(-px); */
+    border-radius: 50%;
+    height: 180px;
+    margin: auto;
+    width: 180px;
+    object-fit: cover;
+    object-position: 0 -20px;
+}
+
+div.presentationImgSvgCont {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -50px;
+    bottom: 80px;
+}
+div.presentationImgSvgCont>a>svg {
+    width: 35px;
+    cursor: pointer;
+}
+div.presentationImgSvgCont>a>svg:hover {
+    width: 42px;
+    transition: .7s all;
+}
+div.presentationImgSvgCont>a {
+    width: 40px;
+    position: absolute;
+    transform-origin: 140px;
+    fill: antiquewhite;
+    color: antiquewhite;
+}
+div.presentationImgSvgCont>a:nth-child(1){
+    transform: rotate(0deg);
+}
+div.presentationImgSvgCont>a:nth-child(1)>svg{
+    transform: rotate(0deg);
+}
+div.presentationImgSvgCont>a:nth-child(2){
+    transform: rotate(90deg);
+}
+div.presentationImgSvgCont>a:nth-child(2)>svg{
+    transform: rotate(-90deg);
+}
+div.presentationImgSvgCont>a:nth-child(3){
+    transform: rotate(180deg);
+}
+div.presentationImgSvgCont>a:nth-child(3)>svg{
+    transform: rotate(-180deg);
+}
+
+
+section.presentation>div.presentationText {
+    /* transform: translateY(-90px); */
+    color: white;
+    font-size: 30px;
+    width: 100%;
+}
+
+section.presentation>div.presentationText>div>p {
+    /* transform: translateY(-90px); */
+    width: 98%;
+    text-align: center;
+    font-size: clamp(1.7rem, 2.1rem, 4.5rem);
+}
+
+/* 
+section.presentation>div>p:nth-child(1) {
+    color: #BDFF00;
+    font-size: 30px;
+}
+
+section.presentation>div>p:nth-child(2) {
+    color: #0ADBB8;
+    font-size: 30px;
+}
+
+section.presentation>div>p:nth-child(3) {
+    color: #E86411;
+    font-size: 30px;
+} */

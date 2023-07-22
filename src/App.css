@@ -1,0 +1,32 @@
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+:root {
+  --background-basic-skill: #e42121;
+  --background-medium-skill: #14c829;
+  --background-advanced-skill: #2705ff;
+}
+
+#root {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  background-image: url("./public/img/background/fontRepeat.png");
+}
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+#root>section {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  scroll-snap-align: start;
+  /* padding-top: 50px; */
+}
+a
+{
+  text-decoration: none;
+}

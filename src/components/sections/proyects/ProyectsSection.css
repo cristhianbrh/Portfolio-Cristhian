@@ -1,0 +1,37 @@
+section.proyects {
+    display: flex;
+    flex-direction: column;
+}
+
+section.proyects>p {
+    margin-top: 55px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: aliceblue;
+}
+
+section.proyects>div {
+    width: 90%;
+    background-color: #17192d;
+    margin: auto;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    /* background: url("./../../../sources/img/logo/logo.png"); */
+    padding-top: 10px;
+    flex: auto;
+    overflow-x: auto;
+}
+
+section.proyects>div>div {
+    display: flex;
+    width: max-content;
+    gap: 15px;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+

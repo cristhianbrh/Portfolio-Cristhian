@@ -1,0 +1,53 @@
+{
+    "RouteGlobal": "./../../../sources/img/skills",
+    "Tabs": [
+        {
+            "Name": "FrontEnd",
+            "Text": "Es la parte en la que me estoy desempeñando mejor últimamente.\nMe gusta que el cliente es el que tiene que interesarse en el diseño de la página.",
+            "Skills": [
+                {
+                    "Name": "Html",
+                    "NameImg": "html-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Css3",
+                    "NameImg": "css3-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "React",
+                    "NameImg": "react-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "JavaScript",
+                    "NameImg": "js-Icon",
+                    "Extension": ".png"
+                }
+            ]
+        },
+        {
+            "Name": "BackEnd",
+            "Text": "Este campo me encanta porque puedo realizar toda la parte lógica y arreglar errores.",
+            "Skills": [
+                {
+                    "Name": "Nodejs",
+                    "NameImg": "nodejs-Icon",
+                    "Extension": ".png"
+                }
+            ]
+        },
+        {
+            "Name": "DataBase",
+            "Text": "Me gusta hacer consultas a una base de datos, porque puedo interactuar de manera óptima con estos.",
+            "Skills": [
+                {
+                    "Name": "Sql",
+                    "NameImg": "sql-Icon",
+                    "Extension": ".png"
+                }
+            ]
+        }
+    ]
+}

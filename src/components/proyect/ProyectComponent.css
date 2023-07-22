@@ -1,0 +1,79 @@
+/* Proyects */div.ProyectComponentClass {
+    width: 500px;
+    height: 90%;
+    margin: auto;
+    background-color: #38334A;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+div.ProyectComponentClass>div.proyectsRedirectionsProyect {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+div.ProyectComponentClass>div.proyectsRedirectionsProyect>a>p {
+    color: rgb(240, 120, 65);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 12px;
+    cursor: pointer;
+}
+div.ProyectComponentClass>img {
+    height: 50px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.ProyectComponentClass>p.proyectsTitleProyect {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+div.ProyectComponentClass>div.imagesProyectsDisplay {
+    margin-top: 5px;
+    flex: auto;
+    overflow: hidden;
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+    opacity: .8;
+    padding-top: 5px;
+}
+div.ProyectComponentClass>div.imagesProyectsDisplay>img {
+    box-shadow: 0 0 5px 2px #000000;
+}
+div.ProyectComponentClass>div.imagesProyectsDisplay>img:nth-child(1) {
+    width: 40%;
+    height: fit-content;
+}
+div.ProyectComponentClass>div.imagesProyectsDisplay>img:nth-child(2) {
+    margin-top: 5px;
+    width: 20%;
+    height: fit-content;
+}
+div.ProyectComponentClass>div.imagesProyectsDisplay>img:nth-child(3) {
+    margin-top: 10px;
+    width: 10%;
+    height: fit-content;
+}
+div.ProyectComponentClass>p.proyectsDescriptionProyect {
+    color: rgb(229, 236, 242);
+    text-align: justify;
+    margin: 5px 15px 15px 15px;
+    font-size: 18px;
+}
+div.ProyectComponentClass>div.proyectsTecProyect {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+div.ProyectComponentClass>div.proyectsTecProyect>div>img {
+    height: 50px;
+}

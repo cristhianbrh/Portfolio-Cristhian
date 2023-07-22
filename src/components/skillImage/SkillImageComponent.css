@@ -1,0 +1,25 @@
+.SkillImageComponent {
+    position: relative;
+}
+
+.SkillImageComponentSpan {
+    color: antiquewhite;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    display: none;
+    /* top: -40%; */
+    position: absolute;
+
+}
+
+.SkillImageComponentImg {
+    cursor: pointer;
+}
+
+.SkillImageComponentSpan__Active {
+    display: block;
+    top: -40%;
+    color: green;
+    transition: 5s all;
+}

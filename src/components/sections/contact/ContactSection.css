@@ -1,0 +1,61 @@
+/* contact page */
+section.contact
+{
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+    align-items: center;
+
+}
+section.contact>.sendMessage
+{
+    margin-top: 60px;
+    background-color: rgba(6, 0, 29, 0.8);
+    height: 90px;
+    width: 450px;
+    height: 500px;
+
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 20px;
+}
+section.contact>.sendMessage>p
+{
+    text-align: center;
+    color: #eeffef;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+section.contact>.sendMessage>form
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+/* section.contact>.sendMessage>form input
+{
+    height: 30px;
+    width: 300px;
+} */
+section.contact>.sendMessage>form p
+{
+    background-color: red;
+
+}
+section.contact>.sendMessage>form textarea
+{
+    width: 300px;
+    text-align: justify;
+    padding: 5px;
+}
+section.contact>.sendMessage>form button
+{
+    height: 30px;
+    width: 200px;
+}
