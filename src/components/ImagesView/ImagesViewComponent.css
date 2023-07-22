@@ -1,0 +1,108 @@
+.ImagesViewComponent{
+    background-color: #00000066;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+}
+
+.ImagesViewComponent>.ImagesViewComponent_svg{
+    background-color: #011b01d8;
+    width: 40px;
+    height: 80%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    color: aliceblue;
+    cursor: pointer;
+}
+.ImagesViewComponent>.ImagesViewComponent_svg:hover{
+    background-color: #022c02d8;
+    transition: all .5s linear;
+}
+.ImagesViewComponent>.ImagesViewComponent_retro{
+    left: calc(10% - 45px);
+}
+.ImagesViewComponent>.ImagesViewComponent_av{
+    right: calc(10% - 45px);
+}
+.ImagesViewComponent>.ImagesViewComponent_Carrousel{
+    margin: 60px 0px;
+    /* background-color: aqua; */
+    width: inherit;
+    position: relative;
+}
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_type{
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_proyect{
+    position: absolute;
+    width: 80%;
+    display: flex;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.ImagesViewComponent>.ImagesViewComponent_close{
+    color: rgb(204, 231, 255);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    cursor: pointer;
+}
+.ImagesViewComponent>.ImagesViewComponent_close:hover{
+    animation: closeAnimation both .5s linear;
+}
+
+@keyframes closeAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(15deg);
+    }
+    80%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_Cont{
+    background-color: #000000aa;
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    border: 2px dashed #fff;
+    width: fit-content;
+    padding: 5px;
+    cursor: pointer;
+}
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_Cont:hover{
+    animation: closeAnimation both .5s linear;
+}
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_logo{
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_github{
+    color: #fff;
+    top: -10px;
+    left: calc(50% - 80px);
+
+}
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_logo>img{
+    height: 50px;
+}
