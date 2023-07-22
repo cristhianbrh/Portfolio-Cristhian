@@ -8,9 +8,8 @@
     text-align: center;
     width: 100%;
     display: none;
-    /* top: -40%; */
     position: absolute;
-
+    font-weight: bolder;
 }
 
 .SkillImageComponentImg {
@@ -19,7 +18,40 @@
 
 .SkillImageComponentSpan__Active {
     display: block;
-    top: -40%;
+    /* top: -40%; */
     color: green;
+    animation: spanActive both .5s linear;
     transition: 5s all;
+}
+.SkillImageComponentImg__Active{
+    animation: imgActive both .5s linear;
+}
+
+@keyframes spanActive{
+    0%{
+        top: 0%;
+        opacity: 0;
+    }
+    50%{
+        top: -20%;
+        opacity: 0;
+    }
+    100%{
+        top: -40%;
+        opacity: 1;
+    }
+}
+@keyframes imgActive{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    80%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }

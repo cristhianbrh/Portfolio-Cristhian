@@ -7,7 +7,7 @@ const SkillsSection = ({ visorRef }) => {
     const [selection, setSelection] =  useState(0);
     const [selectionSkill, setSelectionSkill] =   useState(jsonTabs.Tabs[selection]);
 
-    const styleOption = { // Active
+    const styleOption = { // Active 
         background: "rgba(69, 73, 113, 0.8)"
     }
 
