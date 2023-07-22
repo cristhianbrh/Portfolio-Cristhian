@@ -106,3 +106,20 @@
 .ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_logo>img{
     height: 50px;
 }
+.ImagesViewComponent>.ImagesViewComponent_Carrousel>.ImagesViewComponent_Carrousel_imageAct{
+    background-color: #000000bb;
+    position: absolute;
+    bottom: 5px;
+    height: 30px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 2px dotted #ffffff99;
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
