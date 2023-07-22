@@ -2,10 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import SkillImageComponent from "../skillImage/SkillImageComponent";
 import "./ProyectComponent.css";
 import ImagesViewComponent from "../ImagesView/ImagesViewComponent";
-const ProyectComponent = ({ proyect }) => {
+const ProyectComponent = ({ proyect, setImgComplete, setProyectActView }) => {
     const proyectsPath = "./public/img/Proyects/";
     const [activeImgProyect, setActiveImgProyect] = useState(false);
-    const [imgComplete, setImgComplete] = useState(false);
 
     return (
         <>
@@ -16,7 +15,7 @@ const ProyectComponent = ({ proyect }) => {
                 </div>
                 <img src={proyectsPath + proyect.Icon.NameImg + proyect.Icon.Extension} />
                 <p className="proyectsTitleProyect">{proyect.Name}</p>
-                <div className="imagesProyectsDisplay" onClick={()=>setImgComplete(true)} onMouseEnter={() => setActiveImgProyect(false)} onMouseLeave={() => setActiveImgProyect(true)}>
+                <div className="imagesProyectsDisplay" onClick={()=>{setImgComplete(true); setProyectActView(proyect);}} onMouseEnter={() => setActiveImgProyect(false)} onMouseLeave={() => setActiveImgProyect(true)}>
                     <img src={proyectsPath + proyect.ImagesDisplay.Desktop} />
                     <img src={proyectsPath + proyect.ImagesDisplay.Tablet} />
                     <img src={proyectsPath + proyect.ImagesDisplay.Mobile} />
@@ -36,7 +35,7 @@ const ProyectComponent = ({ proyect }) => {
                     }
                 </div>
             </div>
-            <ImagesViewComponent proyect={proyect} imgComplete={imgComplete} setImgComplete={setImgComplete}/>
+            {/* <ImagesViewComponent proyect={proyect} imgComplete={imgComplete} setImgComplete={setImgComplete}/> */}
         </>
     )
 }

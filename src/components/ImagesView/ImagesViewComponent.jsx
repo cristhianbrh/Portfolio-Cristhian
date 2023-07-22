@@ -1,24 +1,33 @@
 import { useState } from 'react'
 import './ImagesViewComponent.css'
 const ImagesViewComponent = ({ proyect, imgComplete, setImgComplete }) => {
-    const desktop = "./public/img/devices/desktop.png"
     const [actImg, setActImg] = useState(0);
-    const imgs = ["a","e","i"]
+    const types = Object.keys(proyect.ImagesDisplay);
 
-    const logo = "./public/img/Proyects/PortfolioLogo.png"
+    const restriccion = (act) => {
+        if (act < 0) act = types.length - 1;
+        else if (act >= types.length) act = 0;
+        setActImg(act);
+    }
 
-    const img1 = "./public/img/Proyects/PortfolioD.png"
-    const img4 = "./public/img/Proyects/PortfolioT.png"
-    const img3 = "./public/img/Proyects/PortfolioM.png"
+    const pathImages = {
+        proyectsPath: "./public/img/Proyects/",
+        logoImg: "./public/img/Proyects/PortfolioLogo.png",
+        backgrounds: {
+            Desktop: "./public/img/devices/Desktop.png",
+            Tablet: "./public/img/devices/Tablet.png",
+            Mobile: "./public/img/devices/Mobile.png"
+        }
+    }
 
     return (
         <div className="ImagesViewComponent" style={{ display: imgComplete ? "flex" : "none" }}>
 
             <div className="ImagesViewComponent_Carrousel">
-                <img src={desktop} alt="none" className="ImagesViewComponent_Carrousel_type" />
-                <img src={img1} alt="none" className='ImagesViewComponent_Carrousel_proyect' />
+                <img src={pathImages.backgrounds[types[actImg]]} alt="none" className="ImagesViewComponent_Carrousel_type" />
+                <img src={pathImages.proyectsPath + proyect.ImagesDisplay[types[actImg]]} alt="none" className='ImagesViewComponent_Carrousel_proyect' />
                 <div className='ImagesViewComponent_Carrousel_logo ImagesViewComponent_Carrousel_Cont'>
-                    <img src={logo} alt="none" />
+                    <img src={pathImages.logoImg} alt="none" />
                 </div>
                 <div className='ImagesViewComponent_Carrousel_github ImagesViewComponent_Carrousel_Cont'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -27,24 +36,24 @@ const ImagesViewComponent = ({ proyect, imgComplete, setImgComplete }) => {
                 </div>
                 <div className='ImagesViewComponent_Carrousel_imageAct'>
                     {
-                        imgs.map((imagesA, index)=>
-                        <span className='ImagesViewComponent_Carrousel_imageAct_indexImgCircle' style={{
-                            width: "10px",
-                            height: "10px",
-                            border:"#fff solid 2px",
-                            borderRadius: "50%",
-                            cursor: "pointer",
-                            backgroundColor: (index == actImg)?"#fff":""
-                        }}/>)
+                        types.map((imagesA, index) =>
+                            <span className='ImagesViewComponent_Carrousel_imageAct_indexImgCircle' style={{
+                                width: "10px",
+                                height: "10px",
+                                border: "#fff solid 2px",
+                                borderRadius: "50%",
+                                cursor: "pointer",
+                                backgroundColor: (index == actImg) ? "#fff" : ""
+                            }} />)
                     }
                 </div>
             </div>
-            <div className="ImagesViewComponent_retro ImagesViewComponent_svg">
+            <div className="ImagesViewComponent_retro ImagesViewComponent_svg" onClick={() => restriccion(actImg - 1)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
                     <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
                 </svg>
             </div>
-            <div className="ImagesViewComponent_av ImagesViewComponent_svg" >
+            <div className="ImagesViewComponent_av ImagesViewComponent_svg" onClick={() => restriccion(actImg + 1)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
                     <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                 </svg>
