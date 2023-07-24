@@ -14,9 +14,22 @@ const ImagesViewComponent = ({ proyect, imgComplete, setImgComplete }) => {
         proyectsPath: "./public/img/Proyects/",
         logoImg: "./public/img/Proyects/PortfolioLogo.png",
         backgrounds: {
-            Desktop: "./public/img/devices/Desktop.png",
-            Tablet: "./public/img/devices/Tablet.png",
-            Mobile: "./public/img/devices/Mobile.png"
+            Desktop: {
+                Path: "./public/img/devices/Desktop.png",
+                StyleBorderImage: {
+                    borderTop: "50px solid transparent",
+                    borderImageSource: 'url(./public/img/devices/Desktop.png)',
+                    borderImageSlice: "100%",
+                    borderImageRepeat: "stretch",
+                    borderImageWidth: "56px 100% 0 0"
+                }
+            },
+            Tablet: {
+                Path: "./public/img/devices/Tablet.png"
+            },
+            Mobile: {
+                Path: "./public/img/devices/Mobile.png"
+            }
         }
     }
 
@@ -24,8 +37,10 @@ const ImagesViewComponent = ({ proyect, imgComplete, setImgComplete }) => {
         <div className="ImagesViewComponent" style={{ display: imgComplete ? "flex" : "none" }}>
 
             <div className="ImagesViewComponent_Carrousel">
-                <img src={pathImages.backgrounds[types[actImg]]} alt="none" className="ImagesViewComponent_Carrousel_type" />
-                <img src={pathImages.proyectsPath + proyect.ImagesDisplay[types[actImg]]} alt="none" className='ImagesViewComponent_Carrousel_proyect' />
+                {/* <img src={pathImages.backgrounds[types[actImg]]} alt="none" className="ImagesViewComponent_Carrousel_type" /> */}
+                <img src={pathImages.proyectsPath + proyect.ImagesDisplay[types[actImg]]}
+                    style={pathImages.backgrounds.Desktop.StyleBorderImage}
+                    alt="none" className='ImagesViewComponent_Carrousel_proyect' />
                 <div className='ImagesViewComponent_Carrousel_logo ImagesViewComponent_Carrousel_Cont'>
                     <img src={pathImages.logoImg} alt="none" />
                 </div>
