@@ -1,8 +1,9 @@
 import "./HeaderComponent.css";
 import myIcon from './../../sources/img/logo/logo.ico'
+import React, { useId } from "react";
 
 const HeaderComponent = ({optionAct, locationSection, sections}) => {
-    
+    const keySection = useId();    
 
     const styleOption = [{
         color: "#aba6a6",
@@ -34,11 +35,11 @@ const HeaderComponent = ({optionAct, locationSection, sections}) => {
                 <div>
                     {sections.map((section, num) => {
                         
-                        return(<>
-                            <a key={"sections_"+num} onClick={()=>locationSection(num)}
+                        return(<React.Fragment key={"HeaderComponent-class_"+num}>
+                            <a key={"HeaderComponent_sections1_"+num} onClick={()=>locationSection(num)}
                                 style={(optionAct===num)?styleOption[1]:styleOption[0]}>{section}</a>
-                            {(num + 1 < sections.length) ? (<span >|</span>) : null}
-                        </>)}
+                            {(num + 1 < sections.length) ? (<span key={"HeaderComponent_sections1_span_"+num}>|</span>) : null}
+                        </React.Fragment>)}
                     )}
                 </div>
             </nav>

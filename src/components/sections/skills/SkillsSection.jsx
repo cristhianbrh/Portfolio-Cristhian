@@ -1,6 +1,6 @@
 import SkillImageComponent from "../../skillImage/SkillImageComponent";
 import "./SkillsSection.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import jsonTabs from "./TabsValue.json";
 
 const SkillsSection = ({ visorRef }) => {
@@ -23,17 +23,18 @@ const SkillsSection = ({ visorRef }) => {
             <div>
                 <div className="tabs">
                     {jsonTabs.Tabs.map((tab, num) => {
-                        return (<>
-                            <a key={"skillstabs_"+num} onClick={()=>tabChanged(num)} style={(selection === num) ? styleOption : null}>{tab.Name}</a>
-                            {(num + 1 < jsonTabs.Tabs.length) ? (<span >|</span>) : null}
-                        </>)
+                        return (<React.Fragment key={"SkillsSection_fragment_"+num}>
+                            <a key={"SkillsSection_Map_a"+num} onClick={()=>tabChanged(num)} style={(selection === num) ? styleOption : null}>{tab.Name}</a>
+                            {(num + 1 < jsonTabs.Tabs.length) ? (<span key={"SkillsSection_Map_span"+num} >|</span>) : null}
+                        </React.Fragment>)
                     })}
                 </div>
                 <div className="contentSkills">
                     <p>{selectionSkill.Text}</p>
                     <div>
                         {selectionSkill.Skills.map((skill, index)=>{
-                            return <SkillImageComponent img={`/public/img/skills/${skill.NameImg + skill.Extension}`} text={skill.Name}/>
+                            return <SkillImageComponent key={"SkillsSection_Map_SkillImageComponent"+index}
+                                img={`/public/img/skills/${skill.NameImg + skill.Extension}`} text={skill.Name}/>
                         })}
                     </div>
                 </div>

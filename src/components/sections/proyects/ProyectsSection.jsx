@@ -15,7 +15,7 @@ const ProyectsSection = ({ visorRef }) => {
                 <div>
                     {
                         jsonProyects.Proyects.map((proyect, index) =>
-                             <ProyectComponent proyect={proyect} setProyectActView={setProyectActView} key={proyect.Name + index} setImgComplete={setImgComplete}/>
+                             <ProyectComponent proyect={proyect} setProyectActView={setProyectActView} key={"ProyectsSection" + proyect.Name + index} setImgComplete={setImgComplete}/>
                         )
                     }
                     <ImagesViewComponent proyect={proyectActView} imgComplete={imgComplete} setImgComplete={setImgComplete}/>
