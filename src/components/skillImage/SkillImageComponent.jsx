@@ -4,8 +4,8 @@ const SkillImageComponent = ({ img, text}) => {
     const [inHover, setInHover] = useState(false);
     return (
         <div className="SkillImageComponent" onMouseOver={() => { if(!inHover){setInHover(true)} }} onMouseLeave={() => { if(inHover){setInHover(false)} }}>
-            <span className={"SkillImageComponentSpan" + ((inHover) ? " SkillImageComponentSpan__Active" : "")}>{text}</span>
             <img src={img} className={"SkillImageComponentImg" + ((inHover) ? " SkillImageComponentImg__Active" : "")} alt={text} />
+            <span className={"SkillImageComponentSpan" + ((inHover) ? " SkillImageComponentSpan__Active" : "")}>{text}</span>
         </div>
     )
 }

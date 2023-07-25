@@ -1,12 +1,15 @@
 .SkillImageComponent {
     position: relative;
+    width: fit-content;
+    
 }
 
 .SkillImageComponentSpan {
     color: antiquewhite;
     font-size: 15px;
     text-align: center;
-    width: 100%;
+    width: -webkit-fill-available;
+    min-width: max-content;
     display: none;
     position: absolute;
     font-weight: bolder;

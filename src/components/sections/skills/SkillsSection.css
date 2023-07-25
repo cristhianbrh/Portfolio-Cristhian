@@ -65,11 +65,11 @@ section.skills>div>.contentSkills>p
 }
 section.skills>div>.contentSkills>div
 {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 60px));
-    justify-content: center;
+    gap: 30px;
+    justify-content: left;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 } 
 section.skills>div>.contentSkills>div>div>img
 {

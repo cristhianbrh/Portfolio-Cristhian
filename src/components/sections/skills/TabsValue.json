@@ -16,13 +16,23 @@
                     "Extension": ".png"
                 },
                 {
-                    "Name": "React",
+                    "Name": "Reactjs",
                     "NameImg": "react-Icon",
                     "Extension": ".png"
                 },
                 {
                     "Name": "JavaScript",
                     "NameImg": "js-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Expo",
+                    "NameImg": "Expo",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Boostrap",
+                    "NameImg": "Boostrap",
                     "Extension": ".png"
                 }
             ]
@@ -32,8 +42,54 @@
             "Text": "Este campo me encanta porque puedo realizar toda la parte lógica y arreglar errores.",
             "Skills": [
                 {
+                    "Name": "Python",
+                    "NameImg": "python-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Java",
+                    "NameImg": "java-Icon",
+                    "Extension": ".png"
+                },
+                {
                     "Name": "Nodejs",
                     "NameImg": "nodejs-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "C#",
+                    "NameImg": "c-char-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "PHP",
+                    "NameImg": "PHP",
+                    "Extension": ".png"
+                }
+            ]
+        },
+        {
+            "Name": "Mobile Development",
+            "Text": "ds",
+            "Skills": [
+                {
+                    "Name": "React Native",
+                    "NameImg": "react-Icon",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Flutter",
+                    "NameImg": "Flutter",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Android",
+                    "NameImg": "Android",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "iOS",
+                    "NameImg": "iOS",
                     "Extension": ".png"
                 }
             ]
@@ -43,8 +99,65 @@
             "Text": "Me gusta hacer consultas a una base de datos, porque puedo interactuar de manera óptima con estos.",
             "Skills": [
                 {
-                    "Name": "Sql",
-                    "NameImg": "sql-Icon",
+                    "Name": "Sql server",
+                    "NameImg": "SQLserver",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "SQLite",
+                    "NameImg": "SQLite",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "MySQL",
+                    "NameImg": "MySQL",
+                    "Extension": ".png"
+                }
+            ]
+        },
+        {
+            "Name": "Operating systems and distributions",
+            "Text": "adsasaf",
+            "Skills": [
+                {
+                    "Name": "Windows",
+                    "NameImg": "Windows",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Linux",
+                    "NameImg": "Linux",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Arch Linux",
+                    "NameImg": "ArchLinux",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Kali Linux",
+                    "NameImg": "Kali Linux",
+                    "Extension": ".png"
+                }
+            ]
+        },
+        {
+            "Name": "Design Tools",
+            "Text": "adsasaf",
+            "Skills": [
+                {
+                    "Name": "Figma",
+                    "NameImg": "Figma",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Blender",
+                    "NameImg": "Blender",
+                    "Extension": ".png"
+                },
+                {
+                    "Name": "Krita",
+                    "NameImg": "Krita",
                     "Extension": ".png"
                 }
             ]
