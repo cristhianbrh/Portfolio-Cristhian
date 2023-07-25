@@ -1,0 +1,31 @@
+{
+    "Header": {
+        "en": {
+            "HeaderComponentClassSections":[
+                "Home", "About Me", "Skills", "Proyects", "Contact"
+            ]
+        },
+        "es": {
+            "HeaderComponentClassSections":[
+                "Inicio", "Sobre mi", "Habilidades", "Proyectos", "Contacto"
+            ]
+
+        }
+    },
+    "Presentation": {
+        "en": {
+            "presentationText": ["name", "Cristhian","age", "ocupation","Systems Engineering Student"]
+        },
+        "es": {
+            "presentationText": ["nombre", "Cristhian","edad","ocupación","Estudiante de Ingeniería en Sistemas"]
+        }
+    },
+    "AboutMe": {
+        "en": {
+            "aboutMe_text": ["Welcome", "Hello, my name is Cristhian Bautista Ruiz and I am from Peru.","I am a","self-taught fullstack web developer",", passionate about programming and 3D modeling.","My passion for programming began when I was 13 years old, starting with java, I managed to create my first lines of code that ran on a cell phone, to create pranks on my classmates."]
+        },
+        "es": {
+            "aboutMe_text": ["Bienvenidos", "Hola, mi nombre es Cristhian Bautista Ruiz y soy de Perú.","Soy un", "desarrollador web fullstack y autodidacta",", apasionado con la programación y el modelamiento 3D.","Mi pasión por la programación empezó en el momento que tenía 13 años, iniciando con java, logré crear mis primeras líneas de código que se ejecutaba en un celular, para crear bromas a mis compañeros."]
+        }
+    }
+}

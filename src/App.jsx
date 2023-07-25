@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import "./App.css";
 import HeaderComponent from "./components/header/HeaderComponent";
 import useVisible from "./hooks/useVisible";
@@ -8,9 +8,12 @@ import ProyectsSection from "./components/sections/proyects/ProyectsSection";
 import ContactSection from "./components/sections/contact/ContactSection";
 import FooterComponent from "./components/footer/FooterComponent";
 import SkillsSection from "./components/sections/skills/SkillsSection";
+import { LanguageF } from "./hooks/ContextLanguage";
+import languagePage from "./sources/language/languagePage.json"
 
 function App() {
-  const [sections, setSections] = new useState(["Home", "About me", "Skills", "Proyects", "Contact"]);
+  const { language, setLanguage } = useContext(LanguageF);
+  const sections = languagePage.Header[language].HeaderComponentClassSections;
 
   const [sectionCurrent, setSectionCurrent] = new useState(0);
   const locationSection = (numSectionGo) => {
@@ -21,6 +24,7 @@ function App() {
     })
     setSectionCurrent(numSectionGo);
   }
+
 
   const visorRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
   const visible = [useVisible({ visorRef: visorRefs[0], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[1], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[2], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[3], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[4], setSectionCurrent: setSectionCurrent })];

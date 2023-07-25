@@ -1,19 +1,24 @@
 import "./PresentationSection.css";
+import languagePage from "./../../../sources/language/languagePage.json"
+import { useContext } from "react";
+import { LanguageF } from "../../../hooks/ContextLanguage";
 
 const PresentationSection = ({ visorRef }) => {
+    const {language} = useContext(LanguageF)
+    
     const tag = "FullStack";
     const atributos = [
         {
-            atrib: "name",
-            value: "Cristhian"
+            atrib: languagePage.Presentation[language].presentationText[0],
+            value: languagePage.Presentation[language].presentationText[1]
         },
         {
-            atrib: "age",
+            atrib: languagePage.Presentation[language].presentationText[2],
             value: ((new Date().getFullYear()) - 2004)
         },
         {
-            atrib: "ocupation",
-            value: "Estudiante de Ingeniería en Sistemas"
+            atrib: languagePage.Presentation[language].presentationText[3],
+            value: languagePage.Presentation[language].presentationText[4]
         }
     ]
     const profileImg = './public/img/profile/profile.jpg';

@@ -1,9 +1,11 @@
 import "./HeaderComponent.css";
 import myIcon from './../../sources/img/logo/logo.ico'
-import React, { useId } from "react";
+import React, { useContext, useId, useState } from "react";
+import { LanguageF } from "../../hooks/ContextLanguage";
 
 const HeaderComponent = ({optionAct, locationSection, sections}) => {
-    const keySection = useId();    
+    const {language, setLanguage} = useContext(LanguageF);
+    const [lanAct, setLanAct] = useState(true);
 
     const styleOption = [{
         color: "#aba6a6",
@@ -24,15 +26,31 @@ const HeaderComponent = ({optionAct, locationSection, sections}) => {
     //     }))
     // });
     
+    const isPressedLenguage = ()=>{
+        //true:en
+        //false:es
+        
+        //false
+        setLanguage(lanAct?"es":"en");
+
+        setLanAct(!lanAct);
+        //false
+        console.log(language)
+    } 
     
 
     return (
         <header className="HeaderComponent-class">
             <nav>
+                <div className="HeaderComponent-class-Logo-Switch">
+                    <img src={myIcon} alt="Lol" />
+                    <label>
+                        <input type="checkbox" className="HeaderComponent-class-Logo-Switch-input" onClick={isPressedLenguage}/>
+                        <span className="HeaderComponent-class-Logo-Switch-span">es en</span>
+                    </label>
+                </div>
 
-                <img src={myIcon} alt="Lol" />
-
-                <div>
+                <div className="HeaderComponent-class-sections">
                     {sections.map((section, num) => {
                         
                         return(<React.Fragment key={"HeaderComponent-class_"+num}>

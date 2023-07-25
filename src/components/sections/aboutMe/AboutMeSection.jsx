@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import "./AboutMeSection.css";
+import { LanguageF } from "../../../hooks/ContextLanguage";
+import languagePage from "./../../../sources/language/languagePage.json"
+
 const AboutMeSection = ({visorRef}) => {
     const imgProfile = './public/img/profile/profile.jpg';
+    const {language} = useContext(LanguageF)
 
     return(
         <section className="aboutMe" id="appSection1" ref={visorRef}>
@@ -19,11 +24,11 @@ const AboutMeSection = ({visorRef}) => {
                     </div>
                 </div>
                 <div className="aboutMe_text">
-                    <p>Welcome</p>
+                    <p>{languagePage.AboutMe[language].aboutMe_text[0]}</p>
                     <p>
-                        Hola, mi nombre es cristhian y soy de Perú.<br />
-                        Soy un <em>desarrollador web fullstack y autodidacta</em>, apasionado con la programación y el modelamiento 3D.<br />
-                        Mi pasión por la programación empezó en el momento que tenía 13 años, iniciando con java, logré crear mis primeras líneas de código que se ejecutaba en un celular, para crear bromas a mis compañeros.<br />
+                        {languagePage.AboutMe[language].aboutMe_text[1]}<br />
+                        {languagePage.AboutMe[language].aboutMe_text[2]} <em>{languagePage.AboutMe[language].aboutMe_text[3]}</em>{languagePage.AboutMe[language].aboutMe_text[4]}<br />
+                        {languagePage.AboutMe[language].aboutMe_text[5]}<br />
                     </p>
                 </div>
             </section>

@@ -15,9 +15,63 @@ li
     z-index: 3;
 }
 
-.HeaderComponent-class>nav>img {
+.HeaderComponent-class>nav>div.HeaderComponent-class-Logo-Switch{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.HeaderComponent-class>nav>div.HeaderComponent-class-Logo-Switch>img {
     height: 50px;
 }
+
+
+
+
+.HeaderComponent-class .HeaderComponent-class-Logo-Switch>label{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+.HeaderComponent-class .HeaderComponent-class-Logo-Switch>label>input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.HeaderComponent-class .HeaderComponent-class-Logo-Switch>label>span{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #071194;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 2px;
+}
+.HeaderComponent-class .HeaderComponent-class-Logo-Switch>label>span::before{
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input.HeaderComponent-class-Logo-Switch-input:checked + span.HeaderComponent-class-Logo-Switch-span{
+    background-color: #7c6708;
+}
+input.HeaderComponent-class-Logo-Switch-input:checked + span.HeaderComponent-class-Logo-Switch-span::before{
+    transform: translateX(27px);
+}
+
+
 
 .HeaderComponent-class>nav {
     display: flex;
@@ -31,7 +85,7 @@ li
 .HeaderComponent-class>nav>* {
     display: inline-block;
 }
-.HeaderComponent-class>nav>div
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections
 {
     height: 90%;
     width: auto;
@@ -39,7 +93,7 @@ li
     gap: 12px;
     /* margin-right: 12px; */
 }
-.HeaderComponent-class>nav>div>*
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections>*
 {
     height: 100%;
     display: grid;
@@ -49,11 +103,11 @@ li
     padding-left: 12px;
     padding-right: 12px;
 }
-.HeaderComponent-class>nav>div>a
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections>a
 {
     cursor: pointer;
 }
-.HeaderComponent-class>nav>div>a:hover
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections>a:hover
 {
     text-shadow: 0 0 6px #FFFFFF;
 }
