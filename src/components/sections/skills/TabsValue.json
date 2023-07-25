@@ -3,7 +3,7 @@
     "Tabs": [
         {
             "Name": "FrontEnd",
-            "Text": "Es la parte en la que me estoy desempeñando mejor últimamente.\nMe gusta que el cliente es el que tiene que interesarse en el diseño de la página.",
+            "Text": "La parte más importante visualmente de una aplicación o sitio web. Es la capa de la aplicación que los usuarios interactúan directamente y a través de la cual reciben información y realizan acciones.",
             "Skills": [
                 {
                     "Name": "Html",
@@ -70,7 +70,7 @@
         },
         {
             "Name": "Mobile Development",
-            "Text": "ds",
+            "Text": "Me emociona realizar proyectos para dispositivos que son portátiles y ligeros. Según OSIPTEL (2021) el 88.4% de los hogares peruanos cuenta con un teléfono inteligente.",
             "Skills": [
                 {
                     "Name": "React Native",
@@ -96,7 +96,7 @@
         },
         {
             "Name": "DataBase",
-            "Text": "Me gusta hacer consultas a una base de datos, porque puedo interactuar de manera óptima con estos.",
+            "Text": "Si una aplicación es estática es menos interactiva y por lo tanto las personas pasarán menos tiempo en estas. Es por eso que las bases de datos para guardar la información de los usuarios son indispensables para cualquier tipo de programas o aplicaciones.",
             "Skills": [
                 {
                     "Name": "Sql server",
@@ -117,7 +117,7 @@
         },
         {
             "Name": "Operating systems and distributions",
-            "Text": "adsasaf",
+            "Text": "Conocer los sistemas operativos son esenciales para un desarrollador. En lo personal he usado Windows y algunas distribuciones de Linux que me permiten mejorar mis habilidades y hacer más rápido el desarrollo.",
             "Skills": [
                 {
                     "Name": "Windows",
@@ -143,7 +143,7 @@
         },
         {
             "Name": "Design Tools",
-            "Text": "adsasaf",
+            "Text": "Este apartado es en donde realizo los diseños para crear interfaces de usuario, prototipos y elementos gráficos.",
             "Skills": [
                 {
                     "Name": "Figma",
