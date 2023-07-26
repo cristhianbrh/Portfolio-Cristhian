@@ -10,18 +10,22 @@ footer
     display: flex;
     justify-content: space-around;
     color: azure;
+    font-size: clamp(.75rem, 2vw,1rem);
+    align-items: center;
 }
 footer>div
 {
     display: flex;
 }
 footer>div img{
-    height: 30px;
+    /* height: 30px; */
+    height: clamp(.9375rem, 2vw,1.875rem);
     margin: auto 12px;
     cursor: pointer;
 }
 footer>div img:hover{
-    height: 37px;
+    /* height: 37px; */
+    height: clamp(1.125rem, 2vw,2.3125rem);
     box-shadow: 0px 4px 0px #0ADBB8; 
     transition: all 0.5s; 
 }
