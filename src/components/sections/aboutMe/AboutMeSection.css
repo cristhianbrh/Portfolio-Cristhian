@@ -21,8 +21,8 @@ section.aboutMe>div.aboutMe_imgs {
 
 section.aboutMe>div.aboutMe_imgs>img {
     background-color: #0ADBB8;
-    height: 242px;
-    width: 242px;
+    width: clamp(12.5rem, 30vw, 15.125rem);
+    height: clamp(12.5rem, 30vw, 15.125rem);
     border-radius: 10px;
     object-position: center;
     object-fit: cover;
@@ -61,19 +61,39 @@ section.aboutMe>div.aboutMe_text {
 
 section.aboutMe>div.aboutMe_text>p:nth-child(1) {
     color: rgba(142, 254, 0, 0.83);
-    font-size: 25px;
+    /* font-size: 25px;     */
+    font-size: clamp(1.2rem, 2vw, 1.5625rem);
     margin-top: 5px;
 }
 
 section.aboutMe>div.aboutMe_text>p:nth-child(2) {
     color: #eac5c5;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: clamp(.75rem, 2vw, 1.25rem);
     margin-top: 5px;
     text-align: justify;
     word-spacing: 2px;
 }
 
 section.aboutMe>div.aboutMe_text>p:nth-child(2)>em {
-    font-size: 21px;
+    /* font-size: 21px; */
+    font-size: clamp(.8125rem, 2vw, 1.3125rem);
     color: #EB5E5E;
+}
+
+
+@media only screen and (max-width: 810px) {
+    section.aboutMe {
+        flex-direction: column;
+    }
+
+    section.aboutMe>div.aboutMe_imgs {
+        padding-top: 12px;
+        padding-bottom: 0;
+        margin-bottom: 15px;
+    }
+    section.aboutMe>div.aboutMe_text{
+        height: fit-content;
+        margin-top: inherit;
+    }
 }
