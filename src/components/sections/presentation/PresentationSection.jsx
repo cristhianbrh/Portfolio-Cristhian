@@ -21,7 +21,7 @@ const PresentationSection = ({ visorRef }) => {
             value: languagePage.Presentation[language].presentationText[4]
         }
     ]
-    const profileImg = './public/img/profile/profile.jpg';
+    const profileImg = 'img/profile/profile.jpg';
 
     return (
         <section className="presentation" id="appSection0" ref={visorRef}>

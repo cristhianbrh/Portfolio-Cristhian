@@ -4,7 +4,7 @@ import "./ProyectComponent.css";
 import ImagesViewComponent from "../ImagesView/ImagesViewComponent";
 import { LanguageF } from "../../hooks/ContextLanguage";
 const ProyectComponent = ({ proyect, setImgComplete, setProyectActView }) => {
-    const proyectsPath = "./public/img/Proyects/";
+    const proyectsPath = "img/Proyects/";
     const [activeImgProyect, setActiveImgProyect] = useState(true);
     const {language} = useContext(LanguageF);
 
@@ -32,7 +32,7 @@ const ProyectComponent = ({ proyect, setImgComplete, setProyectActView }) => {
                     {
                         proyect.Technologies.map((tech, index) =>
                             // <img src={technologies("./"+tech.NameImg+tech.Extension)} />
-                            <SkillImageComponent img={"./public/img/skills/" + tech.NameImg + tech.Extension} 
+                            <SkillImageComponent img={"img/skills/" + tech.NameImg + tech.Extension} 
                                 text={tech.Name} key={"ProyectComponent_SkillImageComponent"+index} />
                         )
                     }

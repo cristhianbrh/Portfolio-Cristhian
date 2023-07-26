@@ -4,7 +4,7 @@ import { LanguageF } from "../../../hooks/ContextLanguage";
 import languagePage from "./../../../sources/language/languagePage.json"
 
 const AboutMeSection = ({visorRef}) => {
-    const imgProfile = './public/img/profile/profile.jpg';
+    const imgProfile = 'img/profile/profile.jpg';
     const {language} = useContext(LanguageF)
 
     return(

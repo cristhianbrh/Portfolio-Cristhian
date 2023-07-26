@@ -16,26 +16,26 @@ const ImagesViewComponent = ({ proyect, imgComplete, setImgComplete }) => {
     // }, [])
 
     const pathImages = {
-        proyectsPath: "./public/img/Proyects/",
-        logoImg: "./public/img/Proyects/PortfolioLogo.png",
+        proyectsPath: "img/Proyects/",
+        logoImg: "img/Proyects/PortfolioLogo.png",
         backgrounds: {
             Desktop: {
-                Path: "./public/img/devices/Desktop.png",
+                Path: "img/devices/Desktop.png",
                 StyleBorderImage: {
                     borderTopWidth: "50px",
                     borderTopStyle: "solid",
-                    borderImageSource: 'url(./public/img/devices/Desktop.png)',
+                    borderImageSource: 'url(img/devices/Desktop.png)',
                     borderImageSlice: "100%",
                     borderImageRepeat: "stretch",
                     borderImageWidth: "56px 100% 0 0"
                 }
             },
             Tablet: {
-                Path: "./public/img/devices/Tablet.png",
+                Path: "img/devices/Tablet.png",
                 StyleBorderImage: {
                     borderWidth: "30px",
                     borderStyle: "solid",
-                    borderImageSource: 'url(./public/img/devices/Tablet.png)',
+                    borderImageSource: 'url(img/devices/Tablet.png)',
                     borderImageSlice: "8% 6% 7% 5%",
                     borderImageRepeat: "stretch",
                     borderImageWidth: "33px",
@@ -43,10 +43,10 @@ const ImagesViewComponent = ({ proyect, imgComplete, setImgComplete }) => {
                 }
             },
             Mobile: {
-                Path: "./public/img/devices/Mobile.png",
+                Path: "img/devices/Mobile.png",
                 StyleBorderImage: {
                     borderWidth: "18px 15px 16px 15px",
-                    borderImageSource: 'url(./public/img/devices/Mobile.png)',
+                    borderImageSource: 'url(img/devices/Mobile.png)',
                     borderImageSlice: "2% 4% 3.5% 4% fill",
                     borderImageRepeat: "initial",
                     borderImageWidth: "18px 15px 16px 15px",

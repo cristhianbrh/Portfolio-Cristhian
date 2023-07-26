@@ -37,7 +37,7 @@ const SkillsSection = ({ visorRef }) => {
                     <div>
                         {selectionSkill.Skills.map((skill, index)=>{
                             return <SkillImageComponent key={"SkillsSection_Map_SkillImageComponent"+index}
-                                img={`/public/img/skills/${skill.NameImg + skill.Extension}`} text={skill.Name}/>
+                                img={`img/skills/${skill.NameImg + skill.Extension}`} text={skill.Name}/>
                         })}
                     </div>
                 </div>
