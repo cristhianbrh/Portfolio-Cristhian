@@ -90,10 +90,14 @@ input.HeaderComponent-class-Logo-Switch-input:checked + span.HeaderComponent-cla
     height: 90%;
     width: auto;
     display: flex;
-    gap: 12px;
-    /* margin-right: 12px; */
+    align-items: center;
 }
-.HeaderComponent-class>nav>div.HeaderComponent-class-sections>*
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections>div{
+    display: flex;
+    width: auto;
+    gap: 12px;
+}
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections>div>*
 {
     height: 100%;
     display: grid;
@@ -103,11 +107,70 @@ input.HeaderComponent-class-Logo-Switch-input:checked + span.HeaderComponent-cla
     padding-left: 12px;
     padding-right: 12px;
 }
-.HeaderComponent-class>nav>div.HeaderComponent-class-sections>a
+.HeaderComponent-class div.HeaderComponent-class-sections>svg{
+    display: none;
+    cursor: pointer;
+    width: 100%;
+}
+.HeaderComponent-class div.HeaderComponent-class-sections>svg:hover{
+    animation: imgActive both .3s linear;
+}
+@keyframes listHeaderAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(2deg);
+    }
+    80%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections>div>a
 {
     cursor: pointer;
 }
-.HeaderComponent-class>nav>div.HeaderComponent-class-sections>a:hover
+.HeaderComponent-class>nav>div.HeaderComponent-class-sections>div>a:hover
 {
     text-shadow: 0 0 6px #FFFFFF;
+}
+
+
+
+/* 810px */
+@media only screen and (max-width: 810px) {
+    .HeaderComponent-class div.HeaderComponent-class-sections>svg{
+        display: block;
+    }
+    .HeaderComponent-class div.HeaderComponent-class-sections>div {
+        background-color: rgba(12, 12, 12, 0.884);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        left: 0px;
+        bottom: 20px;
+        height: fit-content;
+        padding: 15px 5px;
+        border-radius: 5px;
+    }
+    .HeaderComponent-class div.HeaderComponent-class-sections>div>a {
+        text-align: center;
+        justify-content: center;
+        padding: 5px 0px;
+    }
+    .HeaderComponent-class div.HeaderComponent-class-sections>div.HeaderComponent-class-sectionsDiv__Noactive{
+        display: none;
+    }
+    .HeaderComponent-class div.HeaderComponent-class-sections>div>a {
+        display: flex;
+    }
+    .HeaderComponent-class div.HeaderComponent-class-sections>div>span{
+        display: none;
+    }
 }
