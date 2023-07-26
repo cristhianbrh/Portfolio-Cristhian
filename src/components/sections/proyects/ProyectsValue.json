@@ -4,7 +4,10 @@
             "Name": "Briefcase",
             "Website": "https://cristhianbrh.github.io/briefcase-cristhian/",
             "Repository": "https://github.com/cristhianbrh/briefcase-cristhian",
-            "Description": "Este proyecto ha sido creado con la finalidad de demostrar mis conocimientos y habilidades",
+            "Description": {
+                "en":"This project has been created with the purpose of demonstrating my knowledge and skills.",
+                "es":"Este proyecto ha sido creado con la finalidad de demostrar mis conocimientos y habilidades."
+            },
             "Icon": {
                 "NameImg": "PortfolioLogo",
                 "Extension": ".png"

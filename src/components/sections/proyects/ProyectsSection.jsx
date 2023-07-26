@@ -2,7 +2,7 @@ import { useState } from "react";
 import ImagesViewComponent from "../../ImagesView/ImagesViewComponent";
 import ProyectComponent from "../../Proyect/ProyectComponent";
 import "./ProyectsSection.css";
-import jsonProyects from "./ProyectsValue.json";
+import  jsonProyects  from "./ProyectsValue.json";
 
 const ProyectsSection = ({ visorRef }) => {
     const [imgComplete, setImgComplete] = useState(false);

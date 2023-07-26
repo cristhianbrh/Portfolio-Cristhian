@@ -1,11 +1,13 @@
 import SkillImageComponent from "../../skillImage/SkillImageComponent";
 import "./SkillsSection.css";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import jsonTabs from "./TabsValue.json";
+import { LanguageF } from "../../../hooks/ContextLanguage";
 
 const SkillsSection = ({ visorRef }) => {
     const [selection, setSelection] =  useState(0);
     const [selectionSkill, setSelectionSkill] =   useState(jsonTabs.Tabs[selection]);
+    const {language} = useContext(LanguageF);
 
     const styleOption = { // Active 
         background: "rgba(69, 73, 113, 0.8)"
@@ -30,7 +32,7 @@ const SkillsSection = ({ visorRef }) => {
                     })}
                 </div>
                 <div className="contentSkills">
-                    <p>{selectionSkill.Text}</p>
+                    <p>{selectionSkill.Text[language]}</p>
                     <div>
                         {selectionSkill.Skills.map((skill, index)=>{
                             return <SkillImageComponent key={"SkillsSection_Map_SkillImageComponent"+index}
