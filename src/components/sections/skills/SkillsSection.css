@@ -29,8 +29,8 @@ section.skills>div>.tabs {
     overflow-x: auto;
     overflow-y: hidden;
 
-    font-size: 17px;
-
+    /* font-size: 17px; */
+    font-size: clamp(.875rem, 2vw, 1.0625rem);
     color: rgba(142, 254, 0, 0.83);
 }
 section.skills>div>.tabs::-webkit-scrollbar{
@@ -76,7 +76,8 @@ section.skills>div>.contentSkills {
 }
 section.skills>div>.contentSkills>p
 {
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: clamp(.8125rem, 2vw, 1.25rem);
     flex: auto;
     color: #fcfbffb5;
     text-align: justify;
@@ -91,5 +92,6 @@ section.skills>div>.contentSkills>div
 } 
 section.skills>div>.contentSkills>div>div>img
 {
-    height: 50px;
+    /* height: 50px; */
+    height: clamp(2.5rem, 5vw, 3.125rem);
 } 
