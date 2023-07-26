@@ -18,7 +18,7 @@ const ProyectsSection = ({ visorRef }) => {
         <section style={{position:"relative"}} className="proyects" id="appSection3" ref={visorRef}>
             <p>{languageTexts[language]}</p>
             <div >
-                <div>
+                <div className="proyectsSection_content">
                     {
                         jsonProyects.Proyects.map((proyect, index) =>
                              <ProyectComponent proyect={proyect} setProyectActView={setProyectActView} key={"ProyectsSection" + proyect.Name + index} setImgComplete={setImgComplete}/>

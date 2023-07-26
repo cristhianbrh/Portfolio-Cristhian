@@ -19,8 +19,8 @@ const ProyectComponent = ({ proyect, setImgComplete, setProyectActView }) => {
                 <p className="proyectsTitleProyect">{proyect.Name}</p>
                 <div className="imagesProyectsDisplay" onClick={()=>{setImgComplete(true); setProyectActView(proyect);}} onMouseEnter={() => setActiveImgProyect(false)} onMouseLeave={() => setActiveImgProyect(true)}>
                     <img src={proyectsPath + proyect.ImagesDisplay.Desktop} />
-                    <img src={proyectsPath + proyect.ImagesDisplay.Tablet} />
-                    <img src={proyectsPath + proyect.ImagesDisplay.Mobile} />
+                    {/* <img src={proyectsPath + proyect.ImagesDisplay.Tablet} />
+                    <img src={proyectsPath + proyect.ImagesDisplay.Mobile} /> */}
                     <span className={activeImgProyect ? "__visibleNot" : ""}></span>
                     <svg className={activeImgProyect ? "__visibleNot" : ""} xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />

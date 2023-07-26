@@ -25,13 +25,23 @@ section.proyects>div {
 
 section.proyects>div>div {
     display: flex;
-    width: max-content;
+    width: fit-content;
     gap: 15px;
     height: 100%;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-
-
-
+section.proyects>div::-webkit-scrollbar{
+    height: 5px;
+}
+section.proyects>div::-webkit-scrollbar-track{
+    position: absolute;
+    bottom: 12px;
+    border-radius: 20px;
+    background-color: #a19fa8;
+}
+section.proyects>div::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    border: 3px solid rgb(43, 255, 0);
+}
