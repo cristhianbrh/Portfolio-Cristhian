@@ -19,37 +19,55 @@ section.skills>div {
 
 section.skills>div>.tabs {
     background-color: #38334A;
-    display: inline-flex;
+    display: flex;
     /* gap: 12px; */
     padding: 0px 0px;
     border-radius: 6px 6px 0 0;
     /* margin-left: 10px; */
     height: 30px;
-    overflow: hidden;
+
+    overflow-x: auto;
+    overflow-y: hidden;
 
     font-size: 17px;
 
     color: rgba(142, 254, 0, 0.83);
 }
+section.skills>div>.tabs::-webkit-scrollbar{
+    height: 5px;
+}
+section.skills>div>.tabs::-webkit-scrollbar-track{
+    position: absolute;
+    bottom: 12px;
+    border-radius: 20px;
+    background-color: #a19fa8;
+}
+section.skills>div>.tabs::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    border: 3px solid rgb(255, 166, 0);
+}
+
 section.skills>div>.tabs>a {
     /* background-color: #38334A; */
-    height: 100%;
+    height: 80%;
     padding: 2px 15px;
-    border-radius: 6px 6px 0 0;
+    border-radius: 0px 0px 6px 6px;
     cursor: pointer;
+    min-width: fit-content;
+    font-weight: 500;
 }
 section.skills>div>.tabs>span {
     margin: 0 4px;
 }
 
 section.skills>div>.tabs>a:hover {
-    background-color: rgba(106, 112, 161, 0.8);
+    background-color: rgba(106, 112, 161, .8);
     /*PARA CUANTO ESTÁ ACTIVO background-color: rgba(69, 73, 113, 0.8); */
     transition: all 0.5s;
 }
 section.skills>div>.contentSkills {
     background-color: #38334A;
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
     padding: 15px 10px;
     min-height: 240px;
 

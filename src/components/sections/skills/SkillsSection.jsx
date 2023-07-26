@@ -3,6 +3,7 @@ import "./SkillsSection.css";
 import React, { useContext, useEffect, useState } from "react";
 import jsonTabs from "./TabsValue.json";
 import { LanguageF } from "../../../hooks/ContextLanguage";
+import jsonLanguage from "./../../../sources/language/languagePage.json";
 
 const SkillsSection = ({ visorRef }) => {
     const [selection, setSelection] =  useState(0);
@@ -21,7 +22,7 @@ const SkillsSection = ({ visorRef }) => {
     return (
         <section className="skills" id="appSection2" ref={visorRef}>
 
-            <p>My Skills</p>
+            <p>{jsonLanguage.Header[language].HeaderComponentClassSections[2]}</p>
             <div>
                 <div className="tabs">
                     {jsonTabs.Tabs.map((tab, num) => {
