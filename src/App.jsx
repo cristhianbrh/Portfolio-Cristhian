@@ -29,6 +29,8 @@ function App() {
   const visorRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
   const visible = [useVisible({ visorRef: visorRefs[0], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[1], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[2], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[3], setSectionCurrent: setSectionCurrent }), useVisible({ visorRef: visorRefs[4], setSectionCurrent: setSectionCurrent })];
 
+  const rt = document.getElementById("root");
+  rt.style.backgroundImage = "url('img/background/fontRepeat.png')"
   return (
     <>
       <HeaderComponent optionAct={sectionCurrent} sections={sections} locationSection={locationSection} />
