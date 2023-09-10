@@ -4,17 +4,17 @@ import socialMedia_gmail from "./../../sources/img/socialMedia/gmail-Icon.png";
 const FooterComponent = () => {
     return (
         <footer>
-            <div>
+            {/* <div>
                 <p>Redes sociales:</p>
                 <img src={socialMedia_youtube} alt="YouTube" />
-            </div>
+            </div> */}
             <div>
-                <p>@cristhianBautista</p>
+                <p>@cristhianbrh</p>
             </div>
-            <div>
+            {/* <div>
                 <p>Contáctame:</p>
                 <img src={socialMedia_gmail} alt="Gmail" />
-            </div>
+            </div> */}
         </footer>
     )
 }

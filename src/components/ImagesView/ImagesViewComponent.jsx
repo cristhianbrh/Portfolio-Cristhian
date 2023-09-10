@@ -46,9 +46,10 @@ const ImagesViewComponent = ({ proyect, imgComplete, setImgComplete }) => {
                 Path: "img/devices/Mobile.png",
                 StyleBorderImage: {
                     borderWidth: "18px 15px 16px 15px",
-                    borderImageSource: 'url(img/devices/Mobile.png)',
+                    WebkitBorderImage: 'round',
                     borderImageSlice: "2% 4% 3.5% 4% fill",
                     borderImageRepeat: "initial",
+                    
                     borderImageWidth: "18px 15px 16px 15px",
                     borderStyle: "solid",
                     borderRadius: "42px"

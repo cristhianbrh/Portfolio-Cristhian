@@ -33,7 +33,7 @@ section.aboutMe>div.aboutMe_imgs>div {
     justify-content: space-around;
 }
 
-section.aboutMe>div.aboutMe_imgs>div>svg {
+section.aboutMe>div.aboutMe_imgs>div>a>svg {
     width: 45px;
     cursor: pointer;
     fill: #84eedc;

@@ -95,3 +95,15 @@ section.skills>div>.contentSkills>div>div>img
     /* height: 50px; */
     height: clamp(2.5rem, 5vw, 3.125rem);
 } 
+
+
+@media only screen and (max-width: 810px) {
+    section.skills>div {
+        margin: 0 5px;
+        transition: 1s all;
+    }
+    section.skills>div>.contentSkills>div {
+        gap: 30px;
+        justify-content: center;
+    }
+}

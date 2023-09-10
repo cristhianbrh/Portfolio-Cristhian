@@ -1,7 +1,8 @@
 .SkillImageComponent {
     position: relative;
     width: fit-content;
-    
+    display: flex;
+    justify-content: center;
 }
 
 .SkillImageComponentSpan {
@@ -22,6 +23,7 @@
 .SkillImageComponentSpan__Active {
     display: block;
     /* top: -40%; */
+    /* right: -50%; */
     color: green;
     animation: spanActive both .5s linear;
     transition: 5s all;
@@ -40,7 +42,7 @@
         opacity: 0;
     }
     100%{
-        top: -40%;
+        top: -50%;
         opacity: 1;
     }
 }

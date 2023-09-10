@@ -1,7 +1,7 @@
 /* Proyects */div.ProyectComponentClass {
     /* width: fit-content; */
-    width: clamp(18.75rem, 40vw,31.25rem);
-    /* max-width: 500px; */
+    /* width: clamp(18.75rem, 40vw,31.25rem); */
+    max-width: 400px;
     /* min-width: 300px; */
     height: 90%;
     margin: auto;
@@ -50,6 +50,7 @@ div.ProyectComponentClass>div.imagesProyectsDisplay {
     padding-top: 5px;
     position: relative;
     cursor: pointer;
+    align-items: center;
 }
 .__visibleNot{
     display: none;
@@ -109,3 +110,4 @@ div.ProyectComponentClass>div.proyectsTecProyect>div>img {
     /* height: 50px; */
     height: clamp(2.5rem, 5vw, 3.125rem);
 }
+

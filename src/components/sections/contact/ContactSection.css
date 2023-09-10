@@ -51,7 +51,7 @@ section.contact>.sendMessage>form p
 section.contact>.sendMessage>form textarea
 {
     width: 300px;
-    text-align: justify;
+    text-align: left;
     padding: 5px;
 }
 section.contact>.sendMessage>form button
