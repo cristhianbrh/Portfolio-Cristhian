@@ -2,6 +2,7 @@ import "./ContactSection.css";
 import InputComponent from "../../input/InputComponent";
 
 const ContactSection = ({visorRef}) => {
+    
     return (
         <section className="contact" id="appSection4" ref={visorRef}>
             <div className="sendMessage">
@@ -21,6 +22,7 @@ const ContactSection = ({visorRef}) => {
                         typeInput="text"
                         inputPattern="[0-9]{3,}" />
                     <textarea name="ll" placeholder="Message" id="" cols="30" rows="10"></textarea>
+                    <div data-sitekey={import.meta.env.VITE_ENV_RECAPTCHA}></div>
                     <button>Enviar</button>
                 </form>
             </div>
