@@ -1,29 +1,76 @@
 import "./ContactSection.css";
 import InputComponent from "../../input/InputComponent";
+import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import { useRef } from "react";
 
-const ContactSection = ({visorRef}) => {
-    
+const ContactSection = ({ visorRef }) => {
+    const form = useRef();
+
+    const [isRecaptchaGood, setIsRecaptchaGood] = useState(false);
+    const [inputFullName, setInputFullName] = useState("");
+    const [inputBussineName, setInputBussineName] = useState("");
+    const [inputEmail, setInputEmail] = useState("");
+    const [inputTelephone, setInputTelephone] = useState("");
+
+    const envForm = (e) => {
+        e.preventDefault();
+
+        // const templateParams = {
+        //     name: inputFullName,
+        //     businessName: inputBussineName,
+        //     email: inputEmail,
+        //     telephone: inputTelephone,
+        // };
+
+
+        emailjs.sendForm(import.meta.env.VITE_ENV_EMAILJS_service,
+            import.meta.env.VITE_ENV_EMAILJS_template,
+            form.current,
+            import.meta.env.VITE_ENV_EMAILJS_public
+        ).then((result) => {
+            console.log(result.text)
+        }, (error) => {
+            console.log(error.text)
+        })
+    }
+
+
+
     return (
         <section className="contact" id="appSection4" ref={visorRef}>
             <div className="sendMessage">
                 <p>Contact me</p>
-                <form>
+                <form ref={form} onSubmit={envForm}>
                     <InputComponent
                         textSpan="FullName"
-                        typeInput="text" />
+                        typeInput="text"
+                        name="name"
+                        onChangeValue={inputFullName}
+                        onchangeMethod={setInputFullName} />
                     <InputComponent
                         textSpan="BussineName"
-                        typeInput="text" />
+                        typeInput="text"
+                        name="businessName"
+                        onChangeValue={inputBussineName}
+                        onchangeMethod={setInputBussineName} />
                     <InputComponent
                         textSpan="Email"
-                        typeInput="email" />
+                        typeInput="email"
+                        name="email"
+                        onChangeValue={inputEmail}
+                        onchangeMethod={setInputEmail} />
                     <InputComponent
                         textSpan="Telephone"
                         typeInput="text"
-                        inputPattern="[0-9]{3,}" />
-                    <textarea name="ll" placeholder="Message" id="" cols="30" rows="10"></textarea>
-                    <div data-sitekey={import.meta.env.VITE_ENV_RECAPTCHA}></div>
-                    <button>Enviar</button>
+                        name="telephone"
+                        inputPattern="[0-9]{3,}"
+                        onChangeValue={inputTelephone}
+                        onchangeMethod={setInputTelephone} />
+                    <textarea name="message"  placeholder="Message" id="" cols="30" rows="10" required></textarea>
+                    <ReCAPTCHA className="g-recaptcha" sitekey={import.meta.env.VITE_ENV_RECAPTCHA} onChange={() => setIsRecaptchaGood(!isRecaptchaGood)}></ReCAPTCHA>
+                    {isRecaptchaGood && <button>Enviar</button>}
                 </form>
             </div>
             {/* <div className="socialMedia">

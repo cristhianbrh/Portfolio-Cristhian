@@ -12,15 +12,17 @@ section.contact>.sendMessage
 {
     margin-top: 60px;
     background-color: rgba(6, 0, 29, 0.8);
-    height: 90px;
     width: 450px;
-    height: 500px;
+    height: fit-content;
 
     border-radius: 8px;
     display: flex;
     flex-direction: column;
 
     padding: 0 20px;
+
+    
+    
 }
 section.contact>.sendMessage>p
 {
@@ -37,6 +39,8 @@ section.contact>.sendMessage>form
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
+
+    gap: 5px;
 }
 /* section.contact>.sendMessage>form input
 {
@@ -53,6 +57,7 @@ section.contact>.sendMessage>form textarea
     width: 300px;
     text-align: left;
     padding: 5px;
+    margin-bottom: 8px;
 }
 section.contact>.sendMessage>form button
 {
