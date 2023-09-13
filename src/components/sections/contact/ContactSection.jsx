@@ -4,10 +4,11 @@ import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useRef } from "react";
+import Swal from "sweetalert2";
 
 const ContactSection = ({ visorRef }) => {
     const form = useRef();
-
+    
     const [isRecaptchaGood, setIsRecaptchaGood] = useState(false);
     const [inputFullName, setInputFullName] = useState("");
     const [inputBussineName, setInputBussineName] = useState("");
@@ -30,8 +31,20 @@ const ContactSection = ({ visorRef }) => {
             form.current,
             import.meta.env.VITE_ENV_EMAILJS_public
         ).then((result) => {
-            console.log(result.text)
+            Swal.fire({
+                title: "Mensaje enviado",
+                text: "Su mensaje se envió correctamente",
+                icon: "success",
+                confirmButtonText: "Ok"
+            })
+            // console.log(result.text)
         }, (error) => {
+            Swal.fire({
+                title: "Error al enviar mensaje",
+                text: "Su mensaje no se ha enviado correctamente",
+                icon: "error",
+                confirmButtonText: "Ok"
+            })
             console.log(error.text)
         })
     }

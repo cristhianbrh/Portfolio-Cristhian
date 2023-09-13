@@ -4,9 +4,9 @@
 }
 .InputComponentClass>input
 {
-    height: 40px;
-    width: 300px;
-    font-size: 15px;
+    height: clamp(1.875rem, 10vh,2.5rem);
+    width: clamp(12.5rem, 70vw,18.75rem);
+    font-size: clamp( .6875rem, 2vw, .9375rem);
     font-family:  monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 0.5px;
     font-weight: 600;
@@ -18,6 +18,9 @@
     left: 6px;
     top: 12px;
     transition: all 0.5s;
+
+    font-size: clamp(.75rem, 2vw, 1rem) ;
+
 }
 input.InputComponentClass_input:focus ~ span.InputComponentClass_span,
 input.InputComponentClass_input:valid ~ span.InputComponentClass_span,
@@ -25,8 +28,10 @@ span.InputTextMin
 {
     left: 10px;
     top: 0px;
-    font-size: 12px;
+    font-size: clamp(0.5rem, 2vw, 0.75rem);
     transition: all 0.5s;
+
+
 }
 input.InputComponentClass_input:invalid
 {

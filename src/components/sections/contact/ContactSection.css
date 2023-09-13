@@ -54,10 +54,13 @@ section.contact>.sendMessage>form p
 }
 section.contact>.sendMessage>form textarea
 {
-    width: 300px;
+    /* width: 300px; */
+    width: clamp(12.5rem, 70vw,18.75rem);
+    /* height: ; */
     text-align: left;
     padding: 5px;
     margin-bottom: 8px;
+    font-size:  clamp( .6875rem, 2vw, .8125rem);
 }
 section.contact>.sendMessage>form button
 {
